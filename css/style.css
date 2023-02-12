@@ -1,0 +1,685 @@
+/* 
+Style for Restaurant le Fiasco
+Yannick LIEBNAU, 03/2022 
+*/
+
+/* *** */
+/* Google Fonts Integration : Pinyon Script and Source Sans Pro */
+/* *** */
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* *** */
+/* Generic Styles */
+/* *** */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.hr-center {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+/* *** */
+/* Headings, generic texts areas */
+/* *** */
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Pinyon Script', cursive;
+    font-weight: bold;
+    color: #C89446;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    color: #C89446;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h1+span {
+    font-weight: lighter;
+}
+
+h2+span {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h4>span {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1rem;
+    color : #6F6F6F;
+}
+
+hr {
+    border-color: #C89446;
+    width: 1rem;
+    border-style: solid;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+main a {
+    color: #C89446;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+main a:after {
+    content:" >";
+}
+
+nav a:after {
+    content:none;
+}
+
+select option {
+    color: #000;
+}
+
+/* *** */
+/* Hover effects */
+/* *** */
+
+header :where(li,a) {
+    transition-duration: .3s;
+}
+
+header :where(a:hover,a:active) {
+    color: #C89446;
+}
+
+header nav ul :where(li.reserver:hover,li.reserver:active) {
+    background-color: #C89446;
+}
+
+header nav ul li.reserver a{ 
+    color: #fff;
+}
+
+
+main :where(a:hover,a:active) {
+    text-decoration: underline #C89446;
+    text-underline-offset: 0.3rem;
+}
+
+/* ****** */
+/* Mobile First */
+/* ****** */
+
+/* *** */
+/* Header */
+/* *** */
+
+header {
+    display: flex;
+    width: 100%;
+    height:40vh;
+    background: url(../img/eggs.jpg) no-repeat center center;
+    box-shadow: inset 0 75px 100px #000000;    
+    background-size: cover;
+    text-transform: uppercase;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header nav {
+    font-size: 0.6rem;
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    padding: 0.5rem;
+}
+
+.surtitre {
+    font-family : 'Pinyon Script', serif;
+    color: #C89446;
+    text-transform:none;
+    font-size: 2rem;
+}
+
+.site-title {
+    text-align: center;
+}
+
+.reserver {
+    border: 1px solid #C89446;
+    margin-top: -1px;
+}
+
+.logo {
+    padding-top: 0.5rem;
+}
+
+/* *** */
+/* Main */
+/* *** */
+
+/*
+Discover 
+*/
+
+#spices-bg {
+    background: no-repeat top left / auto url(../img/spices.jpg);
+}
+
+#oranges-bg {
+    background: no-repeat right 40% / auto url(../img/oranges.jpg);
+}
+
+#discover .ourGastronomy img {
+    border: 1px solid #C89446;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#discover .ourGastronomy:first-child hr {
+    display: none;
+}
+
+/* 
+Menu 
+*/
+
+#menu .menu-text {
+    text-align: center;
+}
+
+#menu nav {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#menu nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu ul li a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+
+#menu img {
+    margin-bottom: 1rem;
+}
+
+#menu .prix {
+    display: inline-block;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2rem;
+    color: #C89446;
+    margin-bottom: 1.5rem;
+}
+
+#menu .presentation-plats {
+    width: 100%;
+}
+#menu .presentation-plats .plat {
+    display: flex;
+    gap: 1rem;
+}
+
+#menu .presentation-plats .plat .plat-txt {
+    flex-basis: 60%;
+}
+
+#menu .presentation-plats #plats-droite .plat {
+    flex-flow: row-reverse;
+    text-align: right;
+}
+
+/* 
+Reservation 
+*/
+
+#reservation-bg {
+    background: url(../img/reservation.jpg) no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 75px 100px #000000;
+}
+
+#reservation {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+#reservation :where(h2+span, p) {
+    color: #fff;
+}
+
+#reservation p {
+    font-weight: lighter;
+}
+
+#reservation form {
+    display: flex;
+    flex-flow: column;
+}
+
+#reservation form :where(input, select) {
+    background:transparent;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border : 1px solid #6F6F6F;
+    padding: 0.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#reservation button {
+    text-transform: uppercase;
+    background-color: #C89446;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    transition-duration: .3s;
+    border: 1px solid #C89446;
+}
+
+#reservation button:hover {
+    background: transparent;
+}
+
+/* 
+Blog 
+*/
+
+#blog-bg {
+    background: no-repeat left top / 50vw auto url(../img/news-bg.jpg);
+}
+
+#blog {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#blog .blogHeader hr {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#blog .blogHeader {
+    text-align: right;
+}
+
+#blog .blogContent hr {
+    border-width: 0.5px;
+    border-color: rgba(111, 111, 111, 0.208);
+    width: 100%;
+}
+
+/* *** */
+/* Footer */
+/* *** */
+
+footer #map iframe {
+    width: 100%;
+}
+
+footer {
+    background-color: #313131;
+    background-image: url(../img/splash.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+footer #footer-txt {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+footer #footer-txt  :where(p,ul) {
+    color: #fff;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+footer #footer-txt ul li {
+    margin-bottom: 1rem;
+}
+
+footer #footer-txt ul+p {
+    padding-top: 1rem;
+}
+
+/* ****** */
+/* Style pour format tablette */
+/* ****** */
+
+@media (min-width: 720px) {
+
+    /* *** */
+    /* Header */
+    /* *** */
+    header nav {
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* *** */
+    /* Main */
+    /* *** */
+
+    /* 
+    Discover 
+    */
+
+    #discover .ourGastronomy {
+        display: flex;
+        gap: 6rem;
+        margin-bottom: 7rem;
+    }
+
+    #discover .ourGastronomy .discover-text {
+        flex-shrink: 4;
+        align-self: center;
+    }    
+
+    #discover .ourGastronomy:first-child  {
+        flex-flow: row-reverse;
+        margin-top: -0.5rem; 
+    }
+
+    #discover .ourGastronomy:first-child hr {
+        display:block;
+        margin-top: 3rem;
+    }
+
+    #discover .ourGastronomy:first-child .image-holder {
+        border: 1px solid #C89446;
+        margin-top: -1rem;
+        z-index: 1;
+    }
+
+    #discover .ourGastronomy:first-child .image-holder img {
+        position: relative;
+        z-index: 1;
+        border: none;
+        margin: 0;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    #discover .ourGastronomy:nth-child(2) .image-holder {
+        border: 1px solid #C89446;
+        z-index: 1;
+    }
+
+    #discover .ourGastronomy:nth-child(2) .image-holder img {
+        position: relative;
+        z-index: 1;
+        border: none;
+        margin: 0;
+        top: 2rem;
+        right: 2rem;
+
+    }
+
+    /* 
+    Menu 
+    */
+
+    #menu {
+        width: 100%;
+    }
+
+    #menu .menu-text {
+        width: 60%;
+        margin: auto;
+    }
+
+    #menu .menu-text .nav-menu {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #menu .menu-text ul {
+        justify-content: space-around;
+    }
+
+    #menu .presentation-plats {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    #menu .presentation-plats .plat {
+        margin-bottom: 5rem;
+    }
+
+    #menu .presentation-plats .plat .plat-desc {
+        background-color: #fff;
+    }
+
+    #menu #carre-holder {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu #carre-plongeant {
+        position: relative;
+        top: 2rem;
+        width: 400px;
+        height: 400px;
+        z-index: -1;
+        border: 1px solid #C89446;
+        transform: translate(0,0) rotate(45deg);
+    }
+
+    /* 
+    Chef 
+    */
+
+    #chef {
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+
+    #chef .chef-txt {
+        flex-shrink: 3;
+        align-self: center;
+    }
+
+    #chef .chef-img {
+        align-self: flex-end;
+    }
+
+    /* 
+    Reservation 
+    */
+
+    #reservation .resa-txt {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+
+    #reservation form {
+        flex-flow: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    #reservation form :where(input,select) {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    #reservation button {
+        width: 200px;
+    }
+
+    /* 
+    Blog 
+    */
+
+    #blog .blogHeader {
+        margin-bottom: 3rem;
+    }
+
+    /* 
+    Footer 
+    */
+
+    footer #footer-txt {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer #footer-txt .left-col {
+        flex-basis: 33%;
+    }
+
+}
+
+/* ****** */
+/* Style pour desktop */
+/* ****** */
+
+@media (min-width: 1280px) {
+
+    /* *** */
+    /* Header */
+    /* *** */
+
+    header {
+        height: 60vh;
+    }
+
+    header .site-title h1 {
+        font-size: 4rem;
+    }
+
+    header .site-title .surtitre {
+        font-size: 3rem;
+    }
+
+    header .site-title h1+span {
+        font-size: 1.5rem;
+    }
+
+    /* *** */
+    /* Main */
+    /* *** */
+
+    #spices-bg {
+        background: fixed top 640px left 0px url(../img/spices.jpg) no-repeat;
+    }
+
+    #oranges-bg {    
+        background: fixed top 95px right 0px url(../img/oranges.jpg) no-repeat;
+    }
+
+    .container {
+        width: 60%;
+    }  
+    
+    /* 
+    Discover
+    */
+    
+    #discover {
+        width: 50%;
+    }
+
+    /* 
+    Menu 
+    */
+
+    #menu {
+        width: 50%;
+    }
+    #menu .nav-menu {
+        width: 80%;
+        margin: auto;
+    }
+
+    #menu .presentation-plats {
+        width: 100%;
+        margin-top: 7rem;
+        margin-bottom: 3rem;
+    }
+
+    #menu .presentation-plats #carre-plongeant {
+        top: 0;
+    }
+
+    /* 
+    Reservation 
+    */
+
+    #reservation-bg {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    #reservation {
+        width: 50%;
+    }
+
+    #reservation button {
+        width: 30%;
+    }
+
+    #reservation :where(.resa-txt, form) {
+        padding-bottom: 1rem;
+    }
+    
+  } 
